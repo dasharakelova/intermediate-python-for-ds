@@ -17,3 +17,12 @@ plt.xlabel('год')
 plt.ylabel('население (в миллионах)')
 plt.title('население в 1950-2100 годах')
 plt.xticks([0,1,2], ['zero','one','two'])#списки должны быть одинаковой длины
+
+#size
+plt.scatter(gdp_cap, life_exp, s=pop) #размер точек регулирует еще один список
+pop = np.array(pop)#делаем из списка массив
+pop = pop*2#теперь в нем все можно умножить на два
+
+#color and opacity
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c = col, alpha = 0.8)
+#col - это список цветов, где их столько, сколько наблюдений, альфа устанавливает плотность цвета от 0 до 1
