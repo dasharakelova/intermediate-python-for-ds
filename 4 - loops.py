@@ -19,3 +19,5 @@ for lab, row in cars.iterrows():
     cars.loc[lab,'COUNTRY'] = row['country'].upper()
 
 cars['COUNTRY'] = cars['country'].apply(str.upper) #то же самое, но используется метод apply, который вызывает функцию на Series
+
+print('hello,world!')
